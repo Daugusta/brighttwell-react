@@ -1,0 +1,488 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #212121;
+    background-color: #f6f6f6;
+}
+
+input {
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color:#0075bf;
+}
+
+.btn,
+.btn-add,
+.btn-add-phase,
+.btn-edit,
+.btn-delete {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #0075bf;
+    border: 0;
+    text-decoration: none;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-add,
+.btn-edit,
+.btn-delete{
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.btn-add {
+    background-color: #00a762;
+}
+.btn-delete {
+    background-color: #b72424;
+}
+
+.btn-logout {
+    text-decoration: none;
+    padding: 0.30rem 0.30rem;
+    color: #FFFFFF;
+    background-color: #0075bf;
+    transition: all 0.9s;
+    border-radius: 3px;
+}
+.btn-logout:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background: #061f8f;
+}
+
+.btn-add-phase {
+    background-color: #00a762;
+    margin-right: auto;
+    margin-left: auto; /* Coloca el botón en el lado derecho */
+    margin-top: 10px; /* Ajusta el margen derecho según tu diseño */
+}
+
+.text-center {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table > thead > tr > th {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    background-color: #efefef;
+}
+
+table > tbody > tr > td {
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid #efefef;
+    white-space: nowrap;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+ /* .card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between; 
+} */
+
+
+/* .card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+} */ 
+
+
+.alert {
+    padding: 1rem;
+    background-color: #ff4040;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.notification {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    background-color: #00a762;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* Login/Signup forms*/
+
+.login-signup-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-signup-form .form {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 34px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.login-signup-form .title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-signup-form .pretitle {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-signup-form .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-signup-form .form .message a {
+    
+    text-decoration: none;
+}
+
+/* Login/Signup form */
+
+
+#defaultLayout {
+    display: flex;
+}
+
+#defaultLayout aside {
+    width: 240px;
+    background-color:#0075bf;
+    padding: 1rem
+}
+
+#defaultLayout aside > a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+    /*white-space: nowrap;*/
+}
+
+#defaultLayout aside > a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#defaultLayout aside > a.selected {
+    /* Estilo seleccionado */
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#defaultLayout .content {
+    flex: 1;
+}
+
+#defaultLayout header {
+    height: 80px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#defaultLayout main {
+    padding: 2rem;
+}
+
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.img {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Ajusta según sea necesario */
+  }
+
+.container {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    margin-right: 20px;
+  }
+  .img_icon{
+    max-width: 30%;
+    margin-right: 20px;
+  }
+
+  #user {
+    font-weight: bold;
+  }
+
+  #menu {
+    font-weight: bold;
+    color:#FFF;
+    font-size: 30px;
+    margin-bottom: 10px;;
+  }
+
+  .formula-bar {
+    display: flex;
+  }
+  
+  .formula-square {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    background-color: gray; /* Color por defecto (gris) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color del número dentro del cuadro */
+    font-weight: bold; /* Estilo de fuente en negrita */
+  }
+  
+  .formula-square.active {
+    background-color: #0075bf; /* Color cuando está activo (#0075bf) */
+  }
+  
+  .btn-add-phase.disabled {
+    background-color: gray; /* Cambia el color a gris cuando está deshabilitado */
+    /* Otros estilos deseados para el botón deshabilitado */
+  }
+  /* .vertical-range {
+    height: 100px; /* ajusta la altura según sea necesario 
+    display: inline-block;
+    position: relative;
+    transform: rotate(270deg);
+    transform-origin: 0% 0%;
+  }
+  
+  .slider {
+    height: 100%;
+    width: 20px; /* ajusta el ancho según sea necesario 
+    appearance: vertical;
+  }
+
+  .range-slider {
+    position: absolute;
+    width: 20px; /* Ancho del control deslizante 
+    height: 100%; /* Altura del control deslizante 
+    transform: rotate(270deg); /* Rotar verticalmente 
+  }
+  
+  .range-value {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente 
+    right: -40px; /* Mover a la izquierda del contenedor 
+    transform: translateY(-50%);
+    width: 30px; /* Ancho del campo de entrada 
+    text-align: center; 
+  }*/
+
+  /* input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    
+  }   */
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-left {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .input-left input[type="number"] {
+    opacity: 0.3; /* Opacidad baja para todos los inputs */
+  }
+
+  .input-left input[type="number"].visible {
+    opacity: 1; /* Opacidad completa para el input visible */
+  }
+
+  .input-right {
+    /* position: relative; */
+    align-items: flex-start;
+  }
+
+   /* .input-right input[type="range"] {
+    -webkit-appearance: none;
+    writing-mode: bt-lr;
+    transform: rotate(270deg);
+    direction: rtl;
+    height: 10px;
+    width: 200%;
+    border: none;
+    margin-top: 10px;
+    background-color: grey !important;
+    box-sizing: border-box !important;
+  } */
+  .input-right input[type="range"] {
+    -webkit-appearance: none; /* Para Chrome, Safari, Opera */
+    -moz-appearance: none;    /* Para Firefox */
+    appearance: none;         /* Estándar */
+    writing-mode: vertical-rl; /* Valor correcto para orientación vertical */
+    /* Si deseas rotarlo, ajusta según sea necesario */
+    /* transform: rotate(270deg); */
+    /* direction: rtl; */      /* Ajusta según la necesidad del diseño */
+    height: 200px;             /* Ajusta según tus necesidades */
+    width: 8px;                /* Ajusta según tus necesidades */
+    border: none;
+    margin-top: 10px;
+    background-color: grey !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Estilo para la pista del rango en Firefox */
+  .input-right input[type="range"]::-moz-range-track {
+    width: 8px;
+    background: grey;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  /* Estilo para el pulgar (thumb) del rango en Firefox */
+  .input-right input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px; /* Ajusta para alinear correctamente */
+  }
+  
+  /* Estilo para la pista del rango en WebKit */
+  .input-right input[type="range"]::-webkit-slider-runnable-track {
+    width: 8px;
+    background: grey;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  /* Estilo para el pulgar (thumb) del rango en WebKit */
+  .input-right input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px; /* Ajusta para alinear correctamente */
+  }
+  
+  /* Elimina el outline cuando el input está enfocado */
+  .input-right input[type="range"]:focus {
+    outline: none;
+  }
+  
